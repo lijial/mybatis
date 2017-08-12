@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC 
+	"-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 配置别名 -->
+	<typeAliases>
+		<typeAlias type="org.iMybatis.abc.dao.UserDao" alias="UserDao" />
+		<typeAlias type="org.iMybatis.abc.dto.UserDto" alias="UserDto" />
+	</typeAliases>
+	 
+	<!-- 配置环境变量 -->
+	<environments default="other">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/iMybatis?characterEncoding=GBK" />
+				<property name="username" value="iMybatis" />
+				<property name="password" value="iMybatis" />
+			</dataSource>
+		</environment>
+
+		<environment id="other">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://192.168.6.70:3306/uranus?characterEncoding=GBK" />
+				<property name="username" value="uranus" />
+				<property name="password" value="tongdun1234" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- 配置mappers -->
+	<mappers>
+		<mapper resource="UserDao.xml" />
+	</mappers>
+	
+</configuration>   

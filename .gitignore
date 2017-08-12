@@ -1,0 +1,30 @@
+# Log
+*logs/
+*.log
+*keys/
+
+# TestNG
+*test-output/
+
+#OS generated files ignored#
+.DS_Store
+.classpath
+.project
+.settings
+target
+bin
+.myumldata
+*.mymetadata
+*~
+rebel.xml
+.$*
+conf
+tomcat
+.idea
+*.iml
+node_modules
+*.ipr
+*.iws
+out
+output
+.idea/
